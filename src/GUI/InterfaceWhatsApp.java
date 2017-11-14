@@ -140,7 +140,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         btn_voce.setBackground(new java.awt.Color(29, 185, 84));
         btn_voce.setText("eu");
 
-        txt_mensagem.setBackground(new java.awt.Color(29, 185, 84));
+        txt_mensagem.setBackground(new java.awt.Color(204, 204, 204));
         txt_mensagem.setText("digite aqui...");
 
         btn_contato.setBackground(new java.awt.Color(29, 185, 84));
@@ -187,7 +187,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.setForeground(new java.awt.Color(0, 153, 102));
 
-        txt_pesquisarContatos1.setBackground(new java.awt.Color(29, 185, 84));
+        txt_pesquisarContatos1.setBackground(new java.awt.Color(204, 204, 204));
         txt_pesquisarContatos1.setText("pesquisar");
 
         jButton4.setBackground(new java.awt.Color(29, 185, 84));
