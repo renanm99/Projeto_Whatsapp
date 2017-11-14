@@ -36,6 +36,5 @@ public class Mensagem {
         this.status = status;
     }
     
-    
 }
 
