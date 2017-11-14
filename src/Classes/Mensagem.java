@@ -8,12 +8,19 @@ public class Mensagem {
     private String texto;
     private String status;
     private Date data;
+    /*
+    import java.text.SimpleDateFormat;
+    import java.util.Calendar;
+    Calendar cal = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+    System.out.println( sdf.format(cal.getTime()) );
+    */
 
     public Mensagem(String emissor, String texto, Date data) {
         this.emissor = emissor;
         this.texto = texto;
-        this.data = data;
-        this.status = "Está sendo enviada";
+        this.data = data.getTime();
+        this.status = setStatus("Está sendo enviada");
     }
 
     public String getEmissor() {
