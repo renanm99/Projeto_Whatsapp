@@ -1,3 +1,17 @@
+
+/*
+****
+****
+****
+****
+MUITO PROVÁVEL QUE NAO SERÁ USADO
+CLASSE PRINCIPAL
+****
+****
+****
+****
+*/
+
 package Main;
 
 import Classes.Conversa;
@@ -10,3 +24,5 @@ public class AppWhatsApp {
         cv.NovaConversa("eu", "aaaa");
     }
 }
+
+
