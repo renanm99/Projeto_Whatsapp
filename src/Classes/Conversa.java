@@ -1,5 +1,6 @@
 package Classes;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -61,24 +62,58 @@ public class Conversa {
         System.out.println(ArrayMensagem);
         return "";
         
+=======
+import java.util.ArrayList;
+import java.util.Date;
+
+
+public class Conversa {
+    private ArrayList<Mensagem> mensagem = new ArrayList<>();
+    private String contato;
+    private Date data;
+
+    //Construtor de Conversa
+    public Conversa(String contato, Date data) {
+        this.contato = contato;
+        this.data = data;
+    }
+    
+    //Metodo que iniciará nova conversa
+    //Provavel que aqui se iniciará manipulação de arquivo
+    //Classe para criar o arquivo da conversa
+    public Mensagem NovaConversa(String autor, String texto){
+        return new Mensagem(autor, texto, data);
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     }
 
     //Método para buscar uma palavra ou cadeia de palavras dentro
     //dentro da conversa
+<<<<<<< HEAD
     public ArrayList<Mensagem> BuscarPalavra(String palavra) {
         ArrayList<Mensagem> Buscas = new ArrayList<>();
         for (Mensagem msgEncontrada : ArrayMensagem) {
             if (msgEncontrada.getTexto().contentEquals(palavra)) {
+=======
+    public ArrayList<Mensagem> BuscarPalavra(String palavra){
+        ArrayList<Mensagem> Buscas = new ArrayList<>();
+        for (Mensagem msgEncontrada : mensagem) {
+            if(msgEncontrada.getTexto().contentEquals(palavra)){
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
                 Buscas.add(msgEncontrada);
             }
         }
         return Buscas;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     //Retornar a conversa inteira
     //Aqui provavelmente ficará responsável por
     //Trazer toda a respectiva conversa para ser 
     //apresentada no JFrame
+<<<<<<< HEAD
     public String ConversaCompleta() throws IOException, FileNotFoundException, ClassNotFoundException {
         File arquivo = new File("conversas/" + contato + ".txt");
         try (FileInputStream fo = new FileInputStream(arquivo)) {
@@ -93,4 +128,11 @@ public class Conversa {
         return "";
     }
 
+=======
+    public ArrayList<Mensagem> ConversaCompleta(){
+        return mensagem;
+    }
+    
+    
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 }

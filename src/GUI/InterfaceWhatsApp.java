@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package GUI;
 
 
@@ -12,6 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+=======
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,11 +27,17 @@ import javax.swing.JOptionPane;
  */
 public class InterfaceWhatsApp extends javax.swing.JFrame {
 
+<<<<<<< HEAD
     private String nome;
     private String telUsuario;
 
 
 
+=======
+    /**
+     * Creates new form InterfaceWhatsApp
+     */
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     public InterfaceWhatsApp() {
         initComponents();
     }
@@ -42,7 +51,10 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         buttonGroup1 = new javax.swing.ButtonGroup();
+=======
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -52,6 +64,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         lbl_vistoPorUltimo = new javax.swing.JLabel();
         lbl_hora = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+<<<<<<< HEAD
         radio_eu = new javax.swing.JRadioButton();
         txt_mensagem = new javax.swing.JTextField();
         radio_contato = new javax.swing.JRadioButton();
@@ -75,6 +88,28 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+=======
+        btn_voce = new javax.swing.JRadioButton();
+        txt_mensagem = new javax.swing.JTextField();
+        btn_contato = new javax.swing.JRadioButton();
+        btn_enviar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        txt_pesquisarContatos1 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 51, 51));
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -88,6 +123,10 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
 
         lbl_nome.setBackground(new java.awt.Color(255, 255, 255));
         lbl_nome.setForeground(new java.awt.Color(204, 204, 204));
+<<<<<<< HEAD
+=======
+        lbl_nome.setText("Seu nome");
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -122,7 +161,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         lbl_vistoPorUltimo.setText("visto por último: ");
 
         lbl_hora.setForeground(new java.awt.Color(204, 204, 204));
+<<<<<<< HEAD
         lbl_hora.setText("20:02");
+=======
+        lbl_hora.setText("     hora");
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -136,7 +179,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                         .addComponent(lbl_vistoPorUltimo)
                         .addGap(18, 18, 18)
                         .addComponent(lbl_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+<<<<<<< HEAD
                 .addContainerGap(124, Short.MAX_VALUE))
+=======
+                .addContainerGap(106, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,6 +199,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(29, 185, 84)));
+<<<<<<< HEAD
         jPanel3.setEnabled(false);
 
         radio_eu.setBackground(new java.awt.Color(29, 185, 84));
@@ -178,23 +226,38 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                 radio_contatoItemStateChanged(evt);
             }
         });
+=======
+
+        btn_voce.setBackground(new java.awt.Color(29, 185, 84));
+        btn_voce.setText("eu");
+
+        txt_mensagem.setBackground(new java.awt.Color(204, 204, 204));
+        txt_mensagem.setText("digite aqui...");
+
+        btn_contato.setBackground(new java.awt.Color(29, 185, 84));
+        btn_contato.setText("contato");
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         btn_enviar.setBackground(new java.awt.Color(29, 185, 84));
         btn_enviar.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
         btn_enviar.setForeground(new java.awt.Color(102, 102, 102));
         btn_enviar.setText("Enviar");
         btn_enviar.setToolTipText("");
+<<<<<<< HEAD
         btn_enviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_enviarActionPerformed(evt);
             }
         });
+=======
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
@@ -208,6 +271,19 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                         .addComponent(radio_contato)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+=======
+                .addContainerGap()
+                .addComponent(txt_mensagem)
+                .addGap(8, 8, 8)
+                .addComponent(btn_enviar)
+                .addContainerGap())
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(btn_voce)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_contato)
+                .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,15 +294,22 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                     .addComponent(txt_mensagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(radio_contato)
                     .addComponent(radio_eu))
                 .addContainerGap(11, Short.MAX_VALUE))
+=======
+                    .addComponent(btn_contato)
+                    .addComponent(btn_voce))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
+<<<<<<< HEAD
         jConversa.setEditable(false);
         jConversa.setBackground(new java.awt.Color(204, 204, 204));
         jConversa.setColumns(1);
@@ -237,6 +320,13 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jConversa.setAutoscrolls(false);
         jConversa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane2.setViewportView(jConversa);
+=======
+        jLabel5.setText("jLabel5");
+
+        jLabel6.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel6.setText("jLabel6");
+        jLabel6.setOpaque(true);
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -244,15 +334,31 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jScrollPane2)
+=======
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(jScrollPane2)
                 .addContainerGap())
+=======
+                .addGap(25, 25, 25)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -261,6 +367,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(29, 185, 84), 1, true));
 
+<<<<<<< HEAD
         jList_Contatos.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jList_Contatos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "912345678", "987654321", "914725836", "936258147", "998745632", "915462382", "964527351", "905420367", "975361509", "974106546", "913512061", "198190916", "981541984", "111111111" };
@@ -276,6 +383,19 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jList_Contatos);
 
         jScrollPane4.setViewportView(jScrollPane3);
+=======
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("jLabel1");
+
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("jLabel2");
+
+        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setText("jLabel3");
+
+        jLabel11.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel11.setText("jLabel4");
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -283,15 +403,36 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(235, Short.MAX_VALUE))
+=======
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addContainerGap(221, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                 .addContainerGap())
+=======
+                .addGap(16, 16, 16)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addContainerGap(191, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
 
         jScrollPane1.setViewportView(jPanel6);
@@ -301,6 +442,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jPanel4.setForeground(new java.awt.Color(0, 153, 102));
 
         txt_pesquisarContatos1.setBackground(new java.awt.Color(204, 204, 204));
+<<<<<<< HEAD
         txt_pesquisarContatos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_pesquisarContatos1ActionPerformed(evt);
@@ -311,6 +453,17 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Pesquisar");
+=======
+        txt_pesquisarContatos1.setText("pesquisar");
+
+        jButton4.setBackground(new java.awt.Color(29, 185, 84));
+        jButton4.setForeground(new java.awt.Color(51, 51, 51));
+        jButton4.setText("jButton2");
+
+        jButton3.setBackground(new java.awt.Color(29, 185, 84));
+        jButton3.setForeground(new java.awt.Color(51, 51, 51));
+        jButton3.setText("jButton1");
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -318,21 +471,40 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(txt_pesquisarContatos1)
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addComponent(jLabel1)
                 .addContainerGap(86, Short.MAX_VALUE))
+=======
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4))
+                    .addComponent(txt_pesquisarContatos1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 10, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txt_pesquisarContatos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(23, Short.MAX_VALUE))
+=======
+                .addComponent(txt_pesquisarContatos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton3))
+                .addContainerGap())
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -347,7 +519,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+=======
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
                             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -365,7 +541,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
                     .addComponent(jScrollPane1))
+=======
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -381,12 +561,20 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void btn_enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enviarActionPerformed
         EnviarMensagem(lbl_telefoneContato.getText());
     }//GEN-LAST:event_btn_enviarActionPerformed
@@ -459,11 +647,20 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
      * @param args the command line arguments
      */
 
+=======
+    /**
+     * @param args the command line arguments
+     */
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+<<<<<<< HEAD
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+=======
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -483,6 +680,10 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+<<<<<<< HEAD
+=======
+        /* Create and display the form */
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterfaceWhatsApp().setVisible(true);
@@ -490,6 +691,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         });
     }
 
+<<<<<<< HEAD
     public void GravarUsuario(){
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
@@ -540,6 +742,21 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JList<String> jList_Contatos;
+=======
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton btn_contato;
+    private javax.swing.JButton btn_enviar;
+    private javax.swing.JRadioButton btn_voce;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -548,15 +765,21 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
+<<<<<<< HEAD
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+=======
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     private javax.swing.JLabel lbl_hora;
     private javax.swing.JLabel lbl_nome;
     private javax.swing.JLabel lbl_telefoneContato;
     private javax.swing.JLabel lbl_vistoPorUltimo;
+<<<<<<< HEAD
     private javax.swing.JRadioButton radio_contato;
     private javax.swing.JRadioButton radio_eu;
+=======
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     private javax.swing.JTextField txt_mensagem;
     private javax.swing.JTextField txt_pesquisarContatos1;
     // End of variables declaration//GEN-END:variables

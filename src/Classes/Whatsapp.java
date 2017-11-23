@@ -24,12 +24,20 @@ public class Whatsapp {
     //Eu to achando ne...
     public void EnviarMensagem(String telContato, String texto){
         //????
+<<<<<<< HEAD
         ReceberMensagem("","");
+=======
+        ReceberMensagem();
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     }
 
     //Enviar para o JFrame
     public void ReceberMensagem(String telContato, String texto){
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> fabf7585e316617c1dbf5a4b944de8d0de568abc
     }
 
     /*
