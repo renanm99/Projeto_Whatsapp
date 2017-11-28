@@ -2,11 +2,11 @@ package GUI;
 
 
 import Classes.Conversa;
-import Classes.Mensagem;
+import Classes.Whatsapp;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  *
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
-public class InterfaceWhatsApp extends javax.swing.JFrame {
+public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializable {
 
     private String nome;
     private String telUsuario;
@@ -119,7 +119,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         lbl_telefoneContato.setText("Telefone contato");
 
         lbl_vistoPorUltimo.setForeground(new java.awt.Color(204, 204, 204));
-        lbl_vistoPorUltimo.setText("visto por último: ");
+        lbl_vistoPorUltimo.setText("visto por ï¿½ltimo: ");
 
         lbl_hora.setForeground(new java.awt.Color(204, 204, 204));
         lbl_hora.setText("20:02");
@@ -388,7 +388,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enviarActionPerformed
-        EnviarMensagem(lbl_telefoneContato.getText());
+        try {
+            EnviarMensagem(lbl_telefoneContato.getText());
+        } catch (IOException ex) {
+            Logger.getLogger(InterfaceWhatsApp.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btn_enviarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -412,25 +416,9 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         jPanel3.setVisible(true);
         String telContato = jList_Contatos.getSelectedValue();
         lbl_telefoneContato.setText(telContato);
-        Conversa conv = new Conversa(lbl_telefoneContato.getText(), "");
+        Conversa conv = new Conversa(telContato);
         try {
             conv.ConversaCompleta();
-            /*
-            System.out.println(mensagem.get(0).getTexto());
-            for (Mensagem msg : mensagem) {
-            
-            }
-            
-            /*
-            String telContato = jList_Contatos.getSelectedValue();
-            lbl_telefoneContato.setText(telContato);
-            Conversa conv = new Conversa(telContato, "");
-            try {
-            jConversa.setText(conv.LerConversa());
-            } catch (IOException ex) {
-            jConversa.setText("Erro ao retornar conversa");
-            }
-            */
         } catch (IOException ex) {
             Logger.getLogger(InterfaceWhatsApp.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
@@ -442,7 +430,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
         if(!("".equals(txt_mensagem.getText()))){
-            EnviarMensagem(lbl_telefoneContato.getText());
+            try {
+                EnviarMensagem(lbl_telefoneContato.getText());
+            } catch (IOException ex) {
+                Logger.getLogger(InterfaceWhatsApp.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     }//GEN-LAST:event_txt_mensagemKeyPressed
@@ -499,34 +491,18 @@ public class InterfaceWhatsApp extends javax.swing.JFrame {
         lbl_nome.setText(nome);
     }
 
-    public void EnviarMensagem(String telContato){
+    public void EnviarMensagem(String telContato) throws IOException{
         String texto="";
         String hora = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
 
         if(radio_eu.isSelected()){
-            texto = "Você: "+txt_mensagem.getText();
+            texto = "Vocï¿½: "+txt_mensagem.getText();
             jConversa.setText(jConversa.getText()+texto+"\n");
-            /*
-                jTextPane1.setText("<div style=\"background-color: #90EE90\">"+texto+"</div>");
-                JOptionPane.showMessageDialog(null, jTextPane1.getText());
-'           */
-            Mensagem msg = new Mensagem(telUsuario, "Você: "+texto, hora, lbl_telefoneContato.getText());
-            Conversa conv = new Conversa(lbl_telefoneContato.getText(), hora);
-            try {
-                conv.SalvarConversa(msg);
-            } catch (IOException ex) {
-                System.out.println(ex);
-            }
+            new Whatsapp().EnviarMensagem("user", texto, hora, lbl_telefoneContato.getText());
         }else if(radio_contato.isSelected()){
             texto = "Contato: "+txt_mensagem.getText();
             jConversa.setText(jConversa.getText()+texto+"\n");
-            Mensagem msg = new Mensagem(telContato, "Contato: "+texto, hora, telUsuario);
-            Conversa conv = new Conversa(lbl_telefoneContato.getText(), hora);
-            try {
-                conv.SalvarConversa(msg);
-            } catch (IOException ex) {
-                System.out.println(ex);
-            }
+            new Whatsapp().EnviarMensagem(telContato, texto, hora, lbl_telefoneContato.getText());
         }
         //jConversa.setText(jConversa.getText()+"\n"+texto+hora);
 

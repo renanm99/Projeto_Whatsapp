@@ -2,18 +2,18 @@
 
 package Classes;
 
-public class Mensagem {
+import java.io.Serializable;
+
+public class Mensagem  implements Serializable{
     private String emissor;
     private String texto;
     private String status;
     private String data;
-    private String remetente;
 
-    public Mensagem(String emissor, String texto, String data, String remetente){
+    public Mensagem(String emissor, String texto, String data){
         this.emissor = emissor;
         this.texto = texto;
         this.data = data;
-        this.remetente = remetente;
         setStatus("Está sendo enviada");
     }
 
@@ -32,17 +32,13 @@ public class Mensagem {
     public String getData() {
         return data;
     }
-    
-    public String getRemetente() {
-        return remetente;
-    }
 
     public void setStatus(String status) {
         this.status = status;
     }
     
     public String teste() {
-        return "emissor=" + emissor + ", texto=" + texto + ", status=" + status + ", data=" + data + ", remetente=" + remetente;
+        return "emissor=" + emissor + ", texto=" + texto + ", status=" + status + ", data=" + data;
     }
     
 }
