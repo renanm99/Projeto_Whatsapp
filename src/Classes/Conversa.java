@@ -32,58 +32,61 @@ public class Conversa implements Serializable {
 
     //Provavel que aqui se iniciará manipulação de arquivo
     //Classe para criar o arquivo da conversa
-    public void SalvarConversa(Mensagem mensagem) throws IOException, FileNotFoundException {
-        System.out.println("size - " + getArrayMensagem().size());
-        ArrayMensagem.add(mensagem);
-        ArrayMensagem.add(mensagem);
-        ArrayMensagem.add(mensagem);
-        ArrayMensagem.add(mensagem);
-        System.out.println("size - " + getArrayMensagem().size());
-        
-        mensagem.setStatus("Enviado");
+    public void SalvarConversa(Mensagem mensagem) throws IOException, FileNotFoundException, ClassNotFoundException {
+        ArrayList<Mensagem> msg = null;
         File arquivo = new File("contatos/conversas/" + contato + ".txt");
-        try {
-            FileOutputStream fo = new FileOutputStream(arquivo);
-            ObjectOutputStream bos = new ObjectOutputStream(fo);
-            bos.writeObject(ArrayMensagem);
-            bos.flush();
-            bos.close();
-        } catch (FileNotFoundException ex) {
-            System.out.println("  a" + ex);
-        }
-        if (!"user".equals(mensagem.getEmissor())) {
-            arquivo = new File("contatos/hora/" + contato + ".txt");
+        //checa se arquivo existe -- senao existe, salva a primeira mensagem
+        if (!arquivo.exists()) {
             try {
-                FileWriter fr = new FileWriter(arquivo);
-                fr.write(mensagem.getData());
-                fr.flush();
-                fr.close();
+                ArrayMensagem.add(mensagem);
+                FileOutputStream fo = new FileOutputStream(arquivo);
+                ObjectOutputStream bos = new ObjectOutputStream(fo);
+                bos.writeObject(ArrayMensagem);
+                bos.flush();
+                bos.close();
+
             } catch (FileNotFoundException ex) {
                 System.out.println("  a" + ex);
             }
-        }
-
-    }
-
-    public String LerConversa() throws IOException, FileNotFoundException {
-        /*
-        File arquivo = new File("conversas/" + contato + ".txt");
-        String conversa = "";
-        try (FileReader fr = new FileReader(arquivo)) {
-            int c = fr.read();
-            while (c != -1) {
-                conversa += (char) c;
-                c = fr.read();
+        } else {
+            //traz as mensagens existentes da conversa e grava no ArrayMensagem
+            try {
+                FileInputStream fo = new FileInputStream(arquivo);
+                ObjectInputStream bos = new ObjectInputStream(fo);
+                msg = (ArrayList<Mensagem>) bos.readObject();
+                for (Mensagem mensag : msg) {
+                    ArrayMensagem.add(mensag);
+                }
+                fo.close();
+            } catch (FileNotFoundException ex) {
+                System.out.println(ex);
             }
-            System.out.println(conversa);
-            return conversa;
-        } catch (FileNotFoundException ex) {
-            System.out.println(ex);
-        }
-         */
-        System.out.println(ArrayMensagem);
-        return "";
 
+            mensagem.setStatus("Enviado");
+            //Apos receber mensagens antigas, é gravada a nova mensagem
+            ArrayMensagem.add(mensagem);
+            try {
+                FileOutputStream fo = new FileOutputStream(arquivo);
+                ObjectOutputStream bos = new ObjectOutputStream(fo);
+                bos.writeObject(ArrayMensagem);
+                bos.flush();
+                bos.close();
+            } catch (FileNotFoundException ex) {
+                System.out.println(ex);
+            }
+            //Grava a hora da ultima mensagem enviada pelo contato
+            if (!"user".equals(mensagem.getEmissor())) {
+                arquivo = new File("contatos/hora/" + contato + ".txt");
+                try {
+                    FileWriter fr = new FileWriter(arquivo);
+                    fr.write(mensagem.getData());
+                    fr.flush();
+                    fr.close();
+                } catch (FileNotFoundException ex) {
+                    System.out.println(ex);
+                }
+            }
+        }
     }
 
     //Método para buscar uma palavra ou cadeia de palavras dentro
@@ -102,7 +105,8 @@ public class Conversa implements Serializable {
     //Aqui provavelmente ficará responsável por
     //Trazer toda a respectiva conversa para ser 
     //apresentada no JFrame
-    public ArrayList<Mensagem> ConversaCompleta() throws IOException, FileNotFoundException, ClassNotFoundException {
+    public String ConversaCompleta() throws IOException, FileNotFoundException, ClassNotFoundException {
+        String conversa = "";
         ArrayList<Mensagem> msg = null;
         File arquivo = new File("contatos/conversas/" + contato + ".txt");
         try {
@@ -110,16 +114,18 @@ public class Conversa implements Serializable {
             ObjectInputStream bos = new ObjectInputStream(fo);
             msg = (ArrayList<Mensagem>) bos.readObject();
             for (Mensagem mensagem : msg) {
-                System.out.println(mensagem.getTexto());
+                conversa += mensagem.getTexto() + "\n";
             }
             fo.close();
         } catch (FileNotFoundException ex) {
             System.out.println(ex);
         }
-        return msg;
+        return conversa;
     }
 
     public ArrayList<Mensagem> getArrayMensagem() {
         return ArrayMensagem;
     }
+    
+    
 }

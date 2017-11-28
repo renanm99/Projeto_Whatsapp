@@ -1,16 +1,15 @@
-
-
 package Classes;
 
 import java.io.Serializable;
 
-public class Mensagem  implements Serializable{
+public class Mensagem implements Serializable {
+
     private String emissor;
     private String texto;
     private String status;
     private String data;
 
-    public Mensagem(String emissor, String texto, String data){
+    public Mensagem(String emissor, String texto, String data) {
         this.emissor = emissor;
         this.texto = texto;
         this.data = data;
@@ -36,10 +35,9 @@ public class Mensagem  implements Serializable{
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     public String teste() {
         return "emissor=" + emissor + ", texto=" + texto + ", status=" + status + ", data=" + data;
     }
-    
-}
 
+}
