@@ -25,6 +25,10 @@ public class Whatsapp implements Serializable {
         setStatusUsuario(statusUsuario);
     }
 
+    public Whatsapp(){
+        
+    }
+
     public DefaultListModel Novaconversa() {
         while (true) {
             String numero = JOptionPane.showInputDialog("Digite o numero do contato");
@@ -123,10 +127,6 @@ public class Whatsapp implements Serializable {
             fw.close();
         } catch (Exception ex) {
         }
-    }
-
-    public String CriarUsuario(){
-
     }
 
     public String RetornarUsuario() {

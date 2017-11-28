@@ -434,17 +434,17 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
         } catch (IOException ex) {
         } catch (ClassNotFoundException ex) {
         }
-        lbl_hora.setText(new Whatsapp().VistoPorUltimo(telContato));
+        lbl_hora.setText(user.VistoPorUltimo(telContato));
     }//GEN-LAST:event_jList_ContatosMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jList_Contatos.setModel(new Whatsapp().Novaconversa());
+        jList_Contatos.setModel(user.Novaconversa());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        jList_Contatos.setModel(new Whatsapp().ApagarConversa(jList_Contatos.getSelectedValue()));
+        jList_Contatos.setModel(user.ApagarConversa(jList_Contatos.getSelectedValue()));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void radio_contatoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_radio_contatoItemStateChanged
@@ -454,7 +454,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
             Label1.setText("Online");
         } else {
             Label1.setText("visto por último: ");
-            lbl_hora.setText(new Whatsapp().VistoPorUltimo(lbl_telefoneContato.getText()));
+            lbl_hora.setText(user.VistoPorUltimo(lbl_telefoneContato.getText()));
         }
     }//GEN-LAST:event_radio_contatoItemStateChanged
 
@@ -537,8 +537,8 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         radio_eu.setSelected(true);
-        jList_Contatos.setModel(user.GetContatos());
-        if("na".equals(user.RetornarUsuario())){
+        jList_Contatos.setModel(new Whatsapp().GetContatos());
+        if("na".equals(new Whatsapp().RetornarUsuario())){
             String usuario = JOptionPane.showInputDialog("Digite um nome: ");
             String tel = JOptionPane.showInputDialog("Digite o novo número: ");
             String status = JOptionPane.showInputDialog("Digite um status: ");
@@ -563,11 +563,11 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
         if (radio_eu.isSelected()) {
             texto = hora + " -  Voc�: " + txt_mensagem.getText();
             jConversa.setText(jConversa.getText() + texto + "\n");
-            new Whatsapp().EnviarMensagem("user", texto, hora, lbl_telefoneContato.getText());
+            user.EnviarMensagem("user", texto, hora, lbl_telefoneContato.getText());
         } else if (radio_contato.isSelected()) {
             texto = hora + " -  Contato: " + txt_mensagem.getText();
             jConversa.setText(jConversa.getText() + texto + "\n");
-            new Whatsapp().EnviarMensagem(telContato, texto, hora, lbl_telefoneContato.getText());
+            user.EnviarMensagem(telContato, texto, hora, lbl_telefoneContato.getText());
         }
         //jConversa.setText(jConversa.getText()+"\n"+texto+hora);
 
