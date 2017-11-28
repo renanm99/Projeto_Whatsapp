@@ -19,6 +19,12 @@ public class Whatsapp implements Serializable {
     private String statusUsuario;
     private String data;
 
+    public Whatsapp(String usuario, String telUsuario, String statusUsuario){
+        setUsuario(usuario);
+        setTelUsuario(telUsuario);
+        setStatusUsuario(statusUsuario);
+    }
+
     public DefaultListModel Novaconversa() {
         while (true) {
             String numero = JOptionPane.showInputDialog("Digite o numero do contato");
@@ -119,10 +125,16 @@ public class Whatsapp implements Serializable {
         }
     }
 
+    public String CriarUsuario(){
+
+    }
+
     public String RetornarUsuario() {
         String usertxt = "";
         File arquivo = new File("contatos/user.txt");
         if (!arquivo.exists()) {
+            return "na";
+            /*
             String nome = setUsuario();
             if (nome.length() < 1) {
                 nome = "user";
@@ -152,6 +164,7 @@ public class Whatsapp implements Serializable {
             GravarUsuario(nome, stel, status);
             usertxt = nome + "||" + stel + "||" + status;
             return usertxt;
+            */
         } else {
             try {
                 FileReader fr = new FileReader(arquivo);
@@ -165,21 +178,6 @@ public class Whatsapp implements Serializable {
             }
             return usertxt;
         }
-    }
-
-    public String setUsuario() {
-        this.usuario = JOptionPane.showInputDialog("Digite um nome: ");
-        return getUsuario();
-    }
-
-    public String setTelUsuario() {
-        this.telUsuario = JOptionPane.showInputDialog("Digite o novo número: ");
-        return getTelUsuario();
-    }
-
-    public String setStatusUsuario() {
-        this.statusUsuario = JOptionPane.showInputDialog("Digite um status: ");
-        return getStatusUsuario();
     }
 
     public void setUsuario(String usuario) {
@@ -204,6 +202,10 @@ public class Whatsapp implements Serializable {
 
     public String getStatusUsuario() {
         return statusUsuario;
+    }
+
+    public String toString() {
+        return usuario+"||"+telUsuario+"||"+statusUsuario;
     }
 
 }

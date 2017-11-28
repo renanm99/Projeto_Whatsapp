@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializable {
 
     private String telUsuario;
+    public Whatsapp user = null;
 
     public InterfaceWhatsApp() {
         initComponents();
@@ -463,7 +464,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
         if (nome.length() < 1) {
             nome = "user";
         }
-        new Whatsapp().GravarUsuario(nome, telUsuario, lbl_status.getText());
+        user.GravarUsuario(user.getUsuario(),user.getTelUsuario(), user.getStatusUsuario());
         lbl_nome.setText(nome);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -473,7 +474,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
         if (status.length() < 1) {
             status = "Hey there! I'm using WhatsApp";
         }
-        new Whatsapp().GravarUsuario(lbl_nome.getText(), telUsuario, status);
+        user.GravarUsuario(user.getUsuario(),user.getTelUsuario(), user.getStatusUsuario());
         lbl_status.setText(status);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -484,7 +485,7 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
                 int tel = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero"));
                 String stel = String.valueOf(tel);
                 if (stel.length() == 9) {
-                    new Whatsapp().GravarUsuario(lbl_nome.getText(), stel, lbl_status.getText());
+                    user.GravarUsuario(user.getUsuario(),user.getTelUsuario(), user.getStatusUsuario());
                     telUsuario = stel;
                     break;
                 } else {
@@ -532,18 +533,27 @@ public class InterfaceWhatsApp extends javax.swing.JFrame implements Serializabl
     }
 
     public void Inicio() {
+        String usertxt = "";
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         radio_eu.setSelected(true);
-        Whatsapp user = new Whatsapp();
         jList_Contatos.setModel(user.GetContatos());
-        String usertxt = user.RetornarUsuario();
-        lbl_nome.setText(usertxt.substring(0, (usertxt.indexOf("||"))));
-        user.setUsuario(lbl_nome.getText());
-        lbl_status.setText(usertxt.substring((usertxt.lastIndexOf("||") + 2), usertxt.length()));
-        user.setStatusUsuario(lbl_status.getText());
-        telUsuario = (usertxt.substring((usertxt.indexOf("||")) + 2, (usertxt.lastIndexOf("||"))));
-        user.setTelUsuario(telUsuario);
+        if("na".equals(user.RetornarUsuario())){
+            String usuario = JOptionPane.showInputDialog("Digite um nome: ");
+            String tel = JOptionPane.showInputDialog("Digite o novo número: ");
+            String status = JOptionPane.showInputDialog("Digite um status: ");
+            this.user = new Whatsapp("usuario","tel","status");
+            usertxt = user.toString();
+            lbl_nome.setText(usertxt.substring(0, (usertxt.indexOf("||"))));
+            lbl_status.setText(usertxt.substring((usertxt.lastIndexOf("||") + 2), usertxt.length()));
+            telUsuario = (usertxt.substring((usertxt.indexOf("||")) + 2, (usertxt.lastIndexOf("||"))));
+        }else{
+            usertxt = user.RetornarUsuario();
+            lbl_nome.setText(usertxt.substring(0, (usertxt.indexOf("||"))));
+            lbl_status.setText(usertxt.substring((usertxt.lastIndexOf("||") + 2), usertxt.length()));
+            telUsuario = (usertxt.substring((usertxt.indexOf("||")) + 2, (usertxt.lastIndexOf("||"))));
+        }
+        user.GravarUsuario(user.getUsuario(),user.getTelUsuario(), user.getStatusUsuario());
     }
 
     public void EnviarMensagem(String telContato) throws IOException, FileNotFoundException, ClassNotFoundException {
